@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>护工个人主页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            outline: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            width: 100%;
+            height: 44px;
+            background-color: #5fc0cd;
+            position: relative;
+            position: fixed;
+            top: 0;
+        }
+
+        .back {
+            width: 11px;
+            height: 20px;
+            margin: 12px 15px;
+            background: url('./image/task5_back.png') no-repeat center center;
+            background-size: 100% 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .title {
+            width: 100%;
+            height: 44px;
+            line-height: 44px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .top {
+            width: 100%;
+            height: 164px;
+            background: url('./image/task5_bg.png') no-repeat center center;
+            background-size: 100% 100%;
+            padding: 40px 15px;
+            display: flex;
+            color: #fff;
+        }
+
+        .avatar {
+            width: 84px;
+            height: 84px;
+            background: url('./image/task5_avatar.png') no-repeat center center;
+            background-size: 100% 100%;
+        }
+
+        .info {
+            width: 150px;
+            height: 50px;
+            margin: 15px;
+        }
+
+        .info_top {
+            width: 150px;
+            height: 50%;
+            display: flex;
+        }
+
+        .name {
+            font-size: 18px;
+        }
+
+        .age {
+            margin-left: 15px;
+        }
+
+        .place {
+            width: 150px;
+            height: 20px;
+            margin-top: 5px;
+            font-size: 12px;
+            line-height: 20px;
+        }
+
+        .place_i {
+            display: inline-block;
+            width: 9px;
+            height: 12px;
+            background: url('./image/task5_place.png') no-repeat center center;
+            background-size: 100% 100%;
+            align-items: center;
+            margin: 0 5px;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        .type {
+            width: 100%;
+            height: 50px;
+            line-height: 50px;
+            border-bottom: 1px solid #eaedee;
+        }
+
+        .type_line {
+            width: 2px;
+            height: 16px;
+            background-color: #5fc0cd;
+            margin: 17px 15px;
+            float: left;
+        }
+
+        .type_title {
+            width: 100px;
+            font-size: 16px;
+            height: 50px;
+            line-height: 50px;
+            float: left;
+        }
+
+        .item {
+            display: flex;
+            width: 100%;
+            min-height: 50px;
+            padding-left: 15px;
+            border-bottom: 1px solid #eaedee;
+        }
+        .item_line{
+            width: 1px;
+            height: 26px;
+            margin: 12px 15px;
+            background-color: #eaedee;
+        }
+        .star_i {
+            width: 12px;
+            height: 12px;
+            margin: 19px 5px 19px 0;
+            background: url('./image/task5_star.png') no-repeat center center;
+            background-size: 100% 100%;
+        }
+        .star_i:first-child{
+            margin-left: 15px;
+        }
+
+        .left {
+            min-width: 65px;
+            color: #999;
+            margin-left: 15px;
+            margin-top: 13px;
+            margin-bottom: 13px;
+            text-align: center;
+        }
+        .infinitecenter{
+            display: flex;
+            min-width: 95px;
+            color: #999;
+            margin-left: 15px;
+            align-items: center;
+            place-content: center center;
+        }
+        .right{
+            margin-top: 13px;
+            margin-bottom: 13px;
+        }
+        .red{
+            color: #e26163;
+        }
+
+        footer{
+            width: 100%;
+            height: 65px;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            position: fixed;
+            bottom: 0;
+        }
+        .btn{
+            width: 45%;
+            height: 44px;
+            color: #5fc0cd;
+            border: 2px solid #5fc0cd;
+            background-color: #fff;
+            border-radius: 5px;
+            text-align: center;
+            line-height: 44px;
+        }
+        .active{
+            background-color: #5fc0cd;
+            color: #fff;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <i class="back"></i>
+        <div class="title">
+            个人主页
+        </div>
+    </header>
+    <main>
+        <div class="top">
+            <div class="avatar"></div>
+            <div class="info">
+                <div class="info_top">
+                    <div class="name">高素雅</div>
+                    <div class="age">51岁</div>
+                </div>
+
+                <div class="place">
+                    <span class="place_i"></span>
+                    <span class="place_text">北京.通州.果园</span>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        <div class="middle">
+            <div class="type">
+                <div class="type_line"></div>
+                <div class="item_title">专业技能</div>
+            </div>
+            <div class="item">
+                <div class="star_i"></div>
+                <div class="right">住家</div>
+                <div class="item_line"></div>
+                <div class="star_i"></div>
+                <div class="right">不含餐</div>
+            </div>
+
+            <div class="item">
+                <div class="left">从业年限</div>
+                <div class="item_line"></div>
+                <div class="right">0~3年</div>
+            </div>
+            <div class="item">
+                <div class="left">工作时间</div>
+                <div class="item_line"></div>
+                <div class="right">全天</div>
+            </div>
+            <div class="item">
+                <div class="left">服务价格</div>
+                <div class="item_line"></div>
+                <div class="right red">25元/小时</div>
+            </div>
+            <div class="item">
+                <div class="infinitecenter">
+                    <div>自我介绍</div>
+                    <div class="item_line"></div>
+                </div>
+                
+                <div class="right long"> 可以洗衣、做饭、照顾老人。在护工方面有5年的经验，经验丰富。</div>
+            </div>
+
+            
+        </div>
+    </main>
+    <footer>
+        <div class="btn">留言</div>
+        <div class="btn active">电话联系</div>
+    </footer>
+</body>
+
+</html>
