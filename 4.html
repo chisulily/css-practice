@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登录</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            outline: 0;
+        }
+
+        .home {
+            width: 100vw;
+            height: 100vh;
+            color: #fff;
+            background-color: #eff0f4;
+            overflow: hidden;
+        }
+
+        .header {
+            width: 100%;
+            height: 44px;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            background-color: #5fc0cd;
+            line-height: 44px;
+        }
+
+        .close {
+            margin-left: 15px;
+        }
+
+        .regis {
+            margin-right: 15px;
+        }
+
+        .main {
+            width: 100%;
+            height: 50px;
+            position: relative;
+            margin-top: 8px;
+        }
+
+        .phone {
+            width: 13px;
+            height: 20px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            margin: 15px 23px 15px 20px;
+            background: url("./image/iphone.png") no-repeat center center;
+            background-size: 100% 100%;
+        }
+
+        .locked {
+            width: 13px;
+            height: 20px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            margin: 15px 23px 15px 20px;
+            background: url("./image/locked.png") no-repeat center center;
+            background-size: 100% 100%;
+        }
+
+        .line {
+            width: 1px;
+            height: 26px;
+            line-height: 50px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: #eaedee;
+            margin-left: 58px;
+            margin-top: 12px;
+        }
+
+        .main_input {
+            width: 100%;
+            height: 50px;
+            border: 0px solid #fff;
+            padding-left: 70px;
+        }
+
+        .btn {
+            width: 100%;
+            height: 50px;
+            background-color: #5fc0cd;
+            text-align: center;
+            line-height: 50px;
+            margin-top: 60px;
+            letter-spacing: 10px;
+        }
+
+        .forget {
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            float: right;
+            color: #5fc0cd;
+            margin-right: 2%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="home">
+        <header class="header">
+            <div class="close">关闭</div>
+            <div>登陆</div>
+            <div class="regis">注册</div>
+        </header>
+        <div class="main">
+            <input type="text" name="name" placeholder="请输入手机号" class="main_input">
+            <label class="phone" for="name"></label>
+            <div class="line"></div>
+
+        </div>
+        <div class="main">
+            <input type="text" placeholder="请输入密码" class="main_input">
+            <label class="locked" for="name"></label>
+            <div class="line"></div>
+        </div>
+        <div class="btn">登陆</div>
+        <div class="forget">
+            <a href="#">忘记密码？</a>
+        </div>
+    </div>
+</body>
+
+</html>
