@@ -16,6 +16,65 @@
             box-sizing: border-box;
         }
 
+        header {
+            width: 100%;
+            height: 44px;
+            background-color: #5fc0cd;
+            position: relative;
+            position: fixed;
+            top: 0;
+            z-index: 1;
+        }
+
+        .tab {
+            width: 47%;
+            height: 44px;
+            margin: 0 auto;
+            text-align: center;
+            display: flex;
+            place-content: center center;
+            flex-flow: row nowrap;
+            align-items: center;
+            
+        }
+
+        .tab_select {
+            width: 50%;
+            height: 36px;
+            line-height: 36px;
+            margin: 4px auto;
+            color: #fff;
+            background-color: #55a8b3;
+            border-radius: 5%;
+        }
+
+        .tab_active {
+            width: 50%;
+            height: 36px;
+            line-height: 36px;
+            margin: 4px auto;
+            color: #81cdd8;
+            background-color: #fff;
+            border-radius: 5%;
+        }
+
+        .icon_map {
+            width: 22px;
+            height: 24px;
+            background: url('./image/6_1.png') no-repeat center center;
+            background-size: 100% 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin-top: 10px;
+            margin-right: 15px;
+        }
+
+        main {
+            width: 100%;
+            margin-top: 84px;
+        }
+
         .col-1,
         .col-2,
         .col-3,
@@ -23,13 +82,21 @@
         .col-5,
         .col-6,
         .col-7,
-        .col-8 {
+        .col-8,
+        .col-9,
+        .col-10,
+        .col-11,
+        .col-12 {
             padding-left: 0;
             padding-right: 0;
         }
 
         .selectmenu {
             height: 40px;
+            padding-left: 15px;
+            padding-right: 15px;
+            background-color: #fff;
+            z-index: 1;
         }
 
         .menu {
@@ -95,20 +162,34 @@
         .red {
             color: #e26163;
         }
-        footer{
+
+        footer {
             width: 100%;
             height: 50px;
             background-color: #f8fafb;
             position: fixed;
             bottom: 0;
+            display: flex;
+            place-content: center center;
+            flex-flow: row nowrap;
+            align-items: center;
         }
+
+        .home,
+        .edit,
+        .mine {
+            width: 25%;
+            align-items: center;
+            text-align: center;
+            /* margin: 0 auto; */
+        }
+
         .icon_home {
             width: 23px;
             height: 20px;
-            margin-top: 5px;
-            
             background: url('./image/6_4.png') no-repeat center center;
             background-size: 100% 100%;
+            display: inline-block;
         }
 
         .icon_edit {
@@ -116,54 +197,56 @@
             height: 50px;
             background: url('./image/6_5.png') no-repeat center center;
             background-size: 100% 100%;
+            display: inline-block;
         }
 
         .icon_mine {
             width: 21px;
             height: 21px;
-            margin-top: 5px;
             background: url('./image/6_8.png') no-repeat center center;
             background-size: 100% 100%;
+            display: inline-block;
         }
     </style>
 </head>
 
 <body>
     <header>
-        <div class="tab">
+        <div class="tab container-fluid">
             <div class="tab_select">找雇主</div>
-            <div class="tab_select tab_active">找护工</div>
+            <div class="tab_active">找护工</div>
         </div>
         <div class="icon_map"></div>
-    </header>
-    <main class="container-fluid">
         <div class="row selectmenu ">
             <div class="col-4 text-center menu ">
                 <div class="row">
-                    <div class="col-8">所在地</div>
-                    <div class="col-2">
+                    <div class="col-9 text-center">所在地</div>
+                    <div class="col-1">
                         <div class="icon_down"></div>
                     </div>
                 </div>
             </div>
             <div class="col-4 text-center  menu">
                 <div class="row">
-                    <div class="col-8">食宿</div>
-                    <div class="col-2">
+                    <div class="col-9 text-center">食宿</div>
+                    <div class="col-1">
                         <div class="icon_down"></div>
                     </div>
                 </div>
             </div>
             <div class="col-4 text-center  menu">
                 <div class="row">
-                    <div class="col-8">病人情况</div>
-                    <div class="col-2">
+                    <div class="col-9 text-center">病人情况</div>
+                    <div class="col-1">
                         <div class="icon_down"></div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="list">
+    </header>
+    <main class="container-fluid">
+
+        <div id="list-0" class="list">
             <div class="row list_text">
                 <div class="col-6 gray"><i class="icon_date"></i>服务日期</div>
             </div>
@@ -177,24 +260,113 @@
                 <div class="col-6 gray"><i class="icon_place"></i>北京·通州·果园</div>
             </div>
         </div>
+        <!-- <div id="listDom"></div> -->
 
     </main>
-    <footer class="container-fluid">
-        <div class="row">
-            <div class="col-4 text-right right-block home">
-                <div class="icon_home"></div>
-                首页
-            </div>
-            <div class="col-4 center-block edit">
-                <div class="icon_edit center-block"></div>
-            </div>
-            <div class="col-4 text-left left-block mine">
-                <div class="icon_mine"></div>
-                我的
-            </div>
+    <footer>
+        <div class="home">
+            <div class="icon_home"></div>
+            <div>首页</div>
+        </div>
+        <div class="edit">
+            <div class="icon_edit"></div>
+        </div>
+        <div class="mine">
+            <div class="icon_mine"></div>
+            <div>我的</div>
         </div>
 
     </footer>
+
 </body>
+<script>
+    window.onload = function () {
+        // 无脑复制
+        var sourceNode = document.getElementById("list-0"); // 获得被克隆的节点对象
+        for (var i = 1; i < 10; i++) {
+            var clonedNode = sourceNode.cloneNode(true); // 克隆节点 
+            clonedNode.setAttribute("id", "list-" + i); // 修改一下id 值，避免id 重复 
+            sourceNode.parentNode.appendChild(clonedNode); // 在父节点插入克隆的节点 
+        }
+        // var listInfo = [
+        //     {
+        //         date: "2015-7-5 至 2015-7-12",
+        //         meney: "25元/小时",
+        //         place: "北京·通州·果园"
+        //     },
+        //     {
+        //         date: "2015-7-5 至 2015-7-12",
+        //         meney: "35元/小时",
+        //         place: "北京·通州·果园"
+        //     },
+        //     {
+        //         date: "2015-7-5 至 2015-7-12",
+        //         meney: "45元/小时",
+        //         place: "北京·通州·果园"
+        //     },
+        //     {
+        //         date: "2015-7-5 至 2015-7-12",
+        //         meney: "55元/小时",
+        //         place: "北京·通州·果园"
+        //     },
+        //     {
+        //         date: "2015-7-5 至 2015-7-12",
+        //         meney: "65元/小时",
+        //         place: "北京·通州·果园"
+        //     },
+        //     {
+        //         date: "2015-7-5 至 2015-7-12",
+        //         meney: "75元/小时",
+        //         place: "北京·通州·果园"
+        //     },
+        // ]
+
+        // var tree = Element('div', { id: 'list-container' }, [
+        //     Element('div', { class: 'list_text' }, [
+        //         Element('div', { class: 'gray' }, ['服务日期'])
+        //     ])
+        // ])
+        // console.log(tree)
+        // const root = tree.render();
+        // document.getElementById('listDom').appendChild(root);
+
+    }
+    // function Element(tagName, props, children) {
+    //     if (!(this instanceof Element)) {
+    //         return new Element(tagName, props, children);
+    //     }
+    //     this.tagName = tagName;
+    //     this.props = props || {};
+    //     this.children = children || [];
+    //     this.key = props ? props.key : undefined;
+
+    //     let count = 0;
+    //     this.children.forEach((child) => {
+    //         if (child instanceof Element) {
+    //             count += child.count;
+    //         }
+    //         count++
+    //     });
+    //     this.count = count
+    // }
+
+    // Element.prototype.render = function () {
+    //     const el = document.createElement(this.tagName);
+    //     const props = this.props;
+
+    //     for (const propName in props) {
+    //         // setAttr(el, propName, props[propName]);
+    //         el.setAttribute(propName, props[propName])
+    //     }
+
+    //     this.children.forEach((child) => {
+    //         const childEL = (child instanceof Element) ? child.render() : document.createElement(child)
+    //         el.appendChild(childEL)
+    //     })
+
+    //     return el
+    // }
+
+</script>
 
 </html>
