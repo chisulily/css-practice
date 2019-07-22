@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>桌游精灵-投票页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            outline: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            width: 100%;
+            height: 44px;
+            background-color: #29bde0;
+            color: #fff;
+            position: relative;
+            position: fixed;
+            top: 0;
+            z-index: 1;
+        }
+
+        main {
+            width: 100%;
+            margin-top: 44px;
+            margin-bottom: 108px;
+            background-color: #29bde0;
+        }
+
+        .top {
+            width: 100%;
+            height: 77px;
+            position: relative;
+        }
+
+        .top-text{
+            width: 100%;
+            height: 46px;
+            line-height: 46px;
+            background-color: rgba(255, 255, 255,.7);
+            padding-left: 30px;
+        }
+
+        .icon-audio{
+            width: 30px;
+            height: 30px;
+            background: url('./image/8_audio.png') no-repeat center center;
+            background-size: 100% 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin-top: 8px;
+            margin-right: 15px;
+        }
+        .icon-angle{
+            width: 10px;
+            height: 8px;
+            background: url('./image/8_angle.png') no-repeat center center;
+            background-size: 100% 100%;
+            margin-left: 40px;
+        }
+        .top-explain{
+            color: #fff;
+            margin-left: 40px;
+        }
+
+
+        .middle {
+            width: 100%;
+            height: 400px;
+            margin-top: 20px;
+            /* overflow: auto; */
+            display: flex;
+            place-content: stretch center;
+            flex-flow: row wrap;
+            align-items: center;
+        }
+
+        .item {
+            width: 32%;
+            height: 120px;
+            margin: 0 auto;
+            text-align: center;
+            border: 1px solid #fff;
+            box-sizing: border-box;
+        }
+
+        footer {
+            width: 100%;
+            height: 108px;
+            position: fixed;
+            bottom: 0;
+            z-index: 1;
+            background-color: #29bde0;
+        }
+
+        .bottom-btn {
+            width: 80%;
+            height: 50px;
+            color: #fff;
+            background-color: #fbb435;
+            border-radius: 5px;
+            text-align: center;
+            line-height: 50px;
+            margin: 25px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="icon-menu"></div>
+        <div class="title">投票</div>
+        <div class="icon-close"></div>
+    </header>
+    <main>
+        <div class="top">
+            <div class="top-text">发言讨论结束，大家请投票</div>
+            <div class="icon-audio"></div>
+            <div class="icon-angle"></div>
+            <div class="top-explain">点击得票数最多人的头像</div>
+        </div>
+        <div class="middle">
+            <div class="item">
+                <div class="item-top">
+                    <div class="item-top-identity">水民</div>
+                    <div class="item-top-num">1号</div>
+                </div>
+                <div class="item-bottom">
+                    <i class="icon-1"></i>
+                    <i class="icon-2"></i>
+                    <i class="icon-3"></i>
+                    <i class="icon-4"></i>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-top">
+                    <div class="item-top-identity">水民</div>
+                    <div class="item-top-num">2号</div>
+                </div>
+                <div class="item-bottom">
+                    <i class="icon-1"></i>
+                    <i class="icon-2"></i>
+                    <i class="icon-3"></i>
+                    <i class="icon-4"></i>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-top">
+                    <div class="item-top-identity">警察</div>
+                    <div class="item-top-num">3号</div>
+                </div>
+                <div class="item-bottom">
+                    <i class="icon-1"></i>
+                    <i class="icon-2"></i>
+                    <i class="icon-3"></i>
+                    <i class="icon-4"></i>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-top">
+                    <div class="item-top-identity">法官</div>
+                    <div class="item-top-num">4号</div>
+                </div>
+                <div class="item-bottom">
+                    <i class="icon-1"></i>
+                    <i class="icon-2"></i>
+                    <i class="icon-3"></i>
+                    <i class="icon-4"></i>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-top">
+                    <div class="item-top-identity">狙击手</div>
+                    <div class="item-top-num">5号</div>
+                </div>
+                <div class="item-bottom">
+                    <i class="icon-1"></i>
+                    <i class="icon-2"></i>
+                    <i class="icon-3"></i>
+                    <i class="icon-4"></i>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-top">
+                    <div class="item-top-identity">医生</div>
+                    <div class="item-top-num">6号</div>
+                </div>
+                <div class="item-bottom">
+                    <i class="icon-1"></i>
+                    <i class="icon-2"></i>
+                    <i class="icon-3"></i>
+                    <i class="icon-4"></i>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-top">
+                    <div class="item-top-identity">杀手</div>
+                    <div class="item-top-num">7号</div>
+                </div>
+                <div class="item-bottom">
+                    <i class="icon-1"></i>
+                    <i class="icon-2"></i>
+                    <i class="icon-3"></i>
+                    <i class="icon-4"></i>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-top">
+                    <div class="item-top-identity">水民</div>
+                    <div class="item-top-num">8号</div>
+                </div>
+                <div class="item-bottom">
+                    <i class="icon-1"></i>
+                    <i class="icon-2"></i>
+                    <i class="icon-3"></i>
+                    <i class="icon-4"></i>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-top">
+                    <div class="item-top-identity">水民</div>
+                    <div class="item-top-num">9号</div>
+                </div>
+                <div class="item-bottom">
+                    <i class="icon-1"></i>
+                    <i class="icon-2"></i>
+                    <i class="icon-3"></i>
+                    <i class="icon-4"></i>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-top">
+                    <div class="item-top-identity">水民</div>
+                    <div class="item-top-num">10号</div>
+                </div>
+                <div class="item-bottom">
+                    <i class="icon-1"></i>
+                    <i class="icon-2"></i>
+                    <i class="icon-3"></i>
+                    <i class="icon-4"></i>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-top">
+                    <div class="item-top-identity">水民</div>
+                    <div class="item-top-num">11号</div>
+                </div>
+                <div class="item-bottom">
+                    <i class="icon-1"></i>
+                    <i class="icon-2"></i>
+                    <i class="icon-3"></i>
+                    <i class="icon-4"></i>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-top">
+                    <div class="item-top-identity">水民</div>
+                    <div class="item-top-num">12号</div>
+                </div>
+                <div class="item-bottom">
+                    <i class="icon-1"></i>
+                    <i class="icon-2"></i>
+                    <i class="icon-3"></i>
+                    <i class="icon-4"></i>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <footer>
+        <div class="bottom-btn">投死</div>
+    </footer>
+</body>
+
+</html>
