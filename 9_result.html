@@ -1,14 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>桌游精灵-结果页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            outline: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            width: 100%;
+            height: 44px;
+            background-color: #29bde0;
+            color: #fff;
+            position: relative;
+            position: fixed;
+            top: 0;
+            z-index: 1;
+            border-bottom: 1px solid #50c9e6;
+        }
+
+        .icon-home {
+            width: 26px;
+            height: 23px;
+            background: url('./image/9_home.png') no-repeat center center;
+            background-size: 100% 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin-left: 15px;
+            margin-top: 10px;
+        }
+
+        .title {
+            width: 80px;
+            height: 44px;
+            line-height: 44px;
+            font-size: 20px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .icon-help {
+            width: 22px;
+            height: 22px;
+            background: url('./image/9_help.png') no-repeat center center;
+            background-size: 100% 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin-right: 15px;
+            margin-top: 10px;
+        }
+
+        main {
+            width: 100%;
+            margin-top: 44px;
+            margin-bottom: 78px;
+
+        }
+
+        .result-top {
+            width: 100%;
+            height: 200px;
+            background-color: #29bde0;
+            margin: 0 auto;
+            padding-top: 12px;
+        }
+
+        .white-text {
+            width: 176px;
+            height: 103px;
+            margin: 0 auto;
+            background: url('./image/9_win.png') no-repeat center center;
+            background-size: 100% 100%;
+        }
+
+        .yellow-text {
+            width: 80%;
+            color: #ffc865;
+            margin: 5px auto;
+        }
+
+        .result-bottom {
+            width: 100%;
+            height: 106px;
+            background-color: #29bde0;
+            color: #fff;
+            font-size: 14px;
+        }
+
+        .result-bottom>div {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .people {
+            display: flex;
+            place-content: center flex-start;
+            flex-flow: row wrap;
+            align-items: flex-start;
+        }
+
+        .people>div {
+            width: 33%;
+        }
+
+        .days {
+            width: 100%;
+        }
+
+        .days-item {
+            width: 100%;
+            padding: 0 10%;
+            border-bottom: 1px solid #ededed;
+            position: relative;
+        }
+        .days-item-title{
+            font-size: 16px;
+        }
+        .days-item-time{
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin-right: 10%;
+        }
+        .days-item-content{
+            font-size: 12px;
+            color: #eee;
+        }
+
+        footer {
+            width: 100%;
+            height: 78px;
+            position: fixed;
+            bottom: 0;
+            z-index: 1;
+            background-color: rgba(41, 189, 224, .5);
+        }
+    </style>
 </head>
+
 <body>
     <header>
-        卧底胜利
+        <div class="icon-home"></div>
+        <div class="title">游戏结果</div>
+        <div class="icon-help"></div>
     </header>
+    <main>
+        <div class="result-top">
+
+            <div class="white-text"></div>
+            <div class="yellow-text">太棒了!你知道么？在捉鬼游戏中只有20%的卧底取得游戏最终的胜利哦！</div>
+        </div>
+        <div class="result-bottom">
+            <div>
+                本次游戏共计用时0小时25分钟
+            </div>
+            <div class="people">
+                <div>杀 手0人</div>
+                <div>警 察1人</div>
+                <div>平 民6人 </div>
+                <div>狙击手0人</div>
+                <div>医 生1人</div>
+            </div>
+            <div>卧底词汇：爱新觉罗</div>
+            <div>水民词汇：努尔哈赤</div>
+        </div>
+        <div class="days">
+            <div class="days-item">
+                <div class="days-item-title">第1天</div>
+                <div class="days-item-time">0小时07分</div>
+                <div class="days-item-content">
+                    晚上：5号被杀手杀死，5号是水民
+                </div>
+                <div class="days-item-content">
+                    白天：8号被全民投票投死，8号是杀手
+                </div>
+            </div>
+            <div class="days-item">
+                <div class="days-item-title">第2天</div>
+                <div class="days-item-time">0小时07分</div>
+                <div class="days-item-content">
+                    晚上：5号被杀手杀死，5号是水民
+                </div>
+                <div class="days-item-content">
+                    白天：8号被全民投票投死，8号是杀手
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="btn-again">再来一局</div>
+        <div class="btn-share">上传分享</div>
+    </footer>
 </body>
+
 </html>
