@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
     <title>桌游精灵-投票页</title>
     <style>
         * {
@@ -83,7 +84,7 @@
             padding-left: 30px;
         }
 
-        .icon-audio {
+        .btn-audio {
             width: 30px;
             height: 30px;
             background: url('./image/8_audio.png') no-repeat center center;
@@ -153,6 +154,50 @@
             background-color: #83b09a;
         }
 
+        .item-bottom {
+            width: 100%;
+            height: 18px;
+            margin: 9px auto;
+            display: none;
+        }
+
+        .item-bottom-main {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            place-content: center space-between;
+            flex-flow: row nowrap;
+            align-items: space-between;
+        }
+
+        .icon-1 {
+            width: 16px;
+            height: 16px;
+            background: url('./image/8_1.png') no-repeat center center;
+            background-color: #eee;
+        }
+
+        .icon-2 {
+            width: 16px;
+            height: 16px;
+            background: url('./image/8_2.png') no-repeat center center;
+            background-color: #eee;
+        }
+
+        .icon-3 {
+            width: 16px;
+            height: 16px;
+            background: url('./image/8_3.png') no-repeat center center;
+            background-color: #fff;
+        }
+
+        .icon-4 {
+            width: 16px;
+            height: 16px;
+            background: url('./image/8_4.png') no-repeat center center;
+            background-color: #eee;
+        }
+
         footer {
             width: 100%;
             height: 108px;
@@ -184,7 +229,12 @@
     <main>
         <div class="top">
             <div class="top-text">发言讨论结束，大家请投票</div>
-            <div class="icon-audio"></div>
+            <div class="btn-audio">
+                <audio id="mp3Btn">
+                    <source src="./audio/dna.mp3" type="audio/mpeg">
+                    您的浏览器不支持 audio 元素。
+                </audio>
+            </div>
             <div class="icon-angle"></div>
             <div class="top-explain">点击得票数最多人的头像</div>
         </div>
@@ -195,10 +245,13 @@
                     <div class="item-top-num">1号</div>
                 </div>
                 <div class="item-bottom">
-                    <i class="icon-1"></i>
-                    <i class="icon-2"></i>
-                    <i class="icon-3"></i>
-                    <i class="icon-4"></i>
+                    <div class="item-bottom-main">
+                        <i class="icon-1"></i>
+                        <i class="icon-2"></i>
+                        <i class="icon-3"></i>
+                        <i class="icon-4"></i>
+                    </div>
+
                 </div>
             </div>
             <div class="item">
@@ -207,10 +260,12 @@
                     <div class="item-top-num">2号</div>
                 </div>
                 <div class="item-bottom">
-                    <i class="icon-1"></i>
-                    <i class="icon-2"></i>
-                    <i class="icon-3"></i>
-                    <i class="icon-4"></i>
+                    <div class="item-bottom-main">
+                        <i class="icon-1"></i>
+                        <i class="icon-2"></i>
+                        <i class="icon-3"></i>
+                        <i class="icon-4"></i>
+                    </div>
                 </div>
             </div>
             <div class="item">
@@ -219,10 +274,12 @@
                     <div class="item-top-num">3号</div>
                 </div>
                 <div class="item-bottom">
-                    <i class="icon-1"></i>
-                    <i class="icon-2"></i>
-                    <i class="icon-3"></i>
-                    <i class="icon-4"></i>
+                    <div class="item-bottom-main">
+                        <i class="icon-1"></i>
+                        <i class="icon-2"></i>
+                        <i class="icon-3"></i>
+                        <i class="icon-4"></i>
+                    </div>
                 </div>
             </div>
             <div class="item">
@@ -231,10 +288,12 @@
                     <div class="item-top-num">4号</div>
                 </div>
                 <div class="item-bottom">
-                    <i class="icon-1"></i>
-                    <i class="icon-2"></i>
-                    <i class="icon-3"></i>
-                    <i class="icon-4"></i>
+                    <div class="item-bottom-main">
+                        <i class="icon-1"></i>
+                        <i class="icon-2"></i>
+                        <i class="icon-3"></i>
+                        <i class="icon-4"></i>
+                    </div>
                 </div>
             </div>
             <div class="item">
@@ -243,10 +302,12 @@
                     <div class="item-top-num">5号</div>
                 </div>
                 <div class="item-bottom">
-                    <i class="icon-1"></i>
-                    <i class="icon-2"></i>
-                    <i class="icon-3"></i>
-                    <i class="icon-4"></i>
+                    <div class="item-bottom-main">
+                        <i class="icon-1"></i>
+                        <i class="icon-2"></i>
+                        <i class="icon-3"></i>
+                        <i class="icon-4"></i>
+                    </div>
                 </div>
             </div>
             <div class="item">
@@ -255,10 +316,12 @@
                     <div class="item-top-num">6号</div>
                 </div>
                 <div class="item-bottom">
-                    <i class="icon-1"></i>
-                    <i class="icon-2"></i>
-                    <i class="icon-3"></i>
-                    <i class="icon-4"></i>
+                    <div class="item-bottom-main">
+                        <i class="icon-1"></i>
+                        <i class="icon-2"></i>
+                        <i class="icon-3"></i>
+                        <i class="icon-4"></i>
+                    </div>
                 </div>
             </div>
             <div class="item">
@@ -267,10 +330,12 @@
                     <div class="item-top-num">7号</div>
                 </div>
                 <div class="item-bottom">
-                    <i class="icon-1"></i>
-                    <i class="icon-2"></i>
-                    <i class="icon-3"></i>
-                    <i class="icon-4"></i>
+                    <div class="item-bottom-main">
+                        <i class="icon-1"></i>
+                        <i class="icon-2"></i>
+                        <i class="icon-3"></i>
+                        <i class="icon-4"></i>
+                    </div>
                 </div>
             </div>
             <div class="item">
@@ -279,10 +344,12 @@
                     <div class="item-top-num">8号</div>
                 </div>
                 <div class="item-bottom">
-                    <i class="icon-1"></i>
-                    <i class="icon-2"></i>
-                    <i class="icon-3"></i>
-                    <i class="icon-4"></i>
+                    <div class="item-bottom-main">
+                        <i class="icon-1"></i>
+                        <i class="icon-2"></i>
+                        <i class="icon-3"></i>
+                        <i class="icon-4"></i>
+                    </div>
                 </div>
             </div>
             <div class="item">
@@ -291,10 +358,12 @@
                     <div class="item-top-num">9号</div>
                 </div>
                 <div class="item-bottom">
-                    <i class="icon-1"></i>
-                    <i class="icon-2"></i>
-                    <i class="icon-3"></i>
-                    <i class="icon-4"></i>
+                    <div class="item-bottom-main">
+                        <i class="icon-1"></i>
+                        <i class="icon-2"></i>
+                        <i class="icon-3"></i>
+                        <i class="icon-4"></i>
+                    </div>
                 </div>
             </div>
             <div class="item">
@@ -303,10 +372,12 @@
                     <div class="item-top-num">10号</div>
                 </div>
                 <div class="item-bottom">
-                    <i class="icon-1"></i>
-                    <i class="icon-2"></i>
-                    <i class="icon-3"></i>
-                    <i class="icon-4"></i>
+                    <div class="item-bottom-main">
+                        <i class="icon-1"></i>
+                        <i class="icon-2"></i>
+                        <i class="icon-3"></i>
+                        <i class="icon-4"></i>
+                    </div>
                 </div>
             </div>
             <div class="item">
@@ -315,10 +386,12 @@
                     <div class="item-top-num">11号</div>
                 </div>
                 <div class="item-bottom">
-                    <i class="icon-1"></i>
-                    <i class="icon-2"></i>
-                    <i class="icon-3"></i>
-                    <i class="icon-4"></i>
+                    <div class="item-bottom-main">
+                        <i class="icon-1"></i>
+                        <i class="icon-2"></i>
+                        <i class="icon-3"></i>
+                        <i class="icon-4"></i>
+                    </div>
                 </div>
             </div>
             <div class="item">
@@ -327,10 +400,12 @@
                     <div class="item-top-num">12号</div>
                 </div>
                 <div class="item-bottom">
-                    <i class="icon-1"></i>
-                    <i class="icon-2"></i>
-                    <i class="icon-3"></i>
-                    <i class="icon-4"></i>
+                    <div class="item-bottom-main">
+                        <i class="icon-1"></i>
+                        <i class="icon-2"></i>
+                        <i class="icon-3"></i>
+                        <i class="icon-4"></i>
+                    </div>
                 </div>
             </div>
 
@@ -340,5 +415,40 @@
         <div class="bottom-btn">投死</div>
     </footer>
 </body>
+<script>
+    // 头像移入移出事件
+    var itemTops = document.getElementsByClassName('item-top')
+    var itemBottoms = document.getElementsByClassName('item-bottom')
+    for (let i = 0; i < itemTops.length; i++) {
+        itemTops[i].onmouseover = function () {
+            itemBottoms[i].style.display = "block"
+        }
+        itemTops[i].onmouseout = function () {
+            itemBottoms[i].style.display = "none"
+        }
+    }
+    // 音频控制
+    $(function () {
+        //播放完毕
+        $('#mp3Btn').on('ended', function () {
+            console.log("音频已播放完成");
+            $('.btn-audio').css({ 'background': 'url(./image/8_audio.png) no-repeat center bottom', 'background-size': 'cover' });
+        })
+        //播放器控制
+        var audio = document.getElementById('mp3Btn');
+        audio.volume = .3;
+        $('.btn-audio').click(function () {
+            event.stopPropagation();//防止冒泡
+            if (audio.paused) { //如果当前是暂停状态
+                $('.btn-audio').css({ 'background': 'url(./image/8_circle.png) no-repeat center bottom', 'background-size': 'cover' });
+                audio.play(); //播放
+                return;
+            } else {//当前是播放状态
+                $('.btn-audio').css({ 'background': 'url(./image/8_audio.png) no-repeat center bottom', 'background-size': 'cover' });
+                audio.pause(); //暂停
+            }
+        });
+    })
+</script>
 
 </html>
