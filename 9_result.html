@@ -80,6 +80,17 @@
             margin: 0 auto;
             background: url('./image/9_win.png') no-repeat center center;
             background-size: 100% 100%;
+            position: relative;
+        }
+        .white-text>p{
+            color: #fff;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            margin-left: 24%;
+            margin-bottom: 4%;
+            font-size: 22px;
+            letter-spacing: 2px;
         }
 
         .yellow-text {
@@ -118,22 +129,27 @@
 
         .days-item {
             width: 100%;
-            padding: 0 10%;
+            height: 80px;
+            padding: 5px 10%;
             border-bottom: 1px solid #ededed;
             position: relative;
         }
         .days-item-title{
             font-size: 16px;
+            margin-bottom: 5px;
         }
         .days-item-time{
             position: absolute;
             top: 0;
             right: 0;
             margin-right: 10%;
+            margin-top: 5px;
+            font-size: 12px;
+            color: #b7b7b7;
         }
         .days-item-content{
             font-size: 12px;
-            color: #eee;
+            color: #b7b7b7;
         }
 
         footer {
@@ -143,6 +159,33 @@
             bottom: 0;
             z-index: 1;
             background-color: rgba(41, 189, 224, .5);
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+        }
+        .btn-again{
+            width: 40%;
+            height: 44px;
+            margin-top: 17px;
+            background-color: #f66f6f;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            line-height: 44px;
+            color: #fff;
+            font-size: 20px;
+        }
+        .btn-share{
+            width: 40%;
+            height: 44px;
+            margin-top: 17px;
+            background-color: #fbb435;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            line-height: 44px;
+            color: #fff;
+            font-size: 20px;
         }
     </style>
 </head>
@@ -156,7 +199,9 @@
     <main>
         <div class="result-top">
 
-            <div class="white-text"></div>
+            <div class="white-text">
+                <p>卧底胜利</p>
+            </div>
             <div class="yellow-text">太棒了!你知道么？在捉鬼游戏中只有20%的卧底取得游戏最终的胜利哦！</div>
         </div>
         <div class="result-bottom">
@@ -198,7 +243,7 @@
     </main>
     <footer>
         <div class="btn-again">再来一局</div>
-        <div class="btn-share">上传分享</div>
+        <div class="btn-share">上传并分享</div>
     </footer>
 </body>
 
