@@ -20,12 +20,25 @@
             border-radius: 10px;
             /* float: left; */
         }
+        .btn{
+            color: #e90;
+            text-align: center;
+            border: 1px solid #e90;
+            border-radius: 5px;
+            margin: 10px auto;
+            height: 40px;
+            line-height: 40px;
+        }
+        .btn:hover{
+            color: #fff;
+            background-color: #e90;
+        }
     </style>
 </head>
 
 <body>
     <div class="home">
-        <div class="item"></div>
+        <div class="item" id="item1"></div>
         <div class="item"></div>
         <div class="item"></div>
         <div class="item"></div>
@@ -35,6 +48,9 @@
         <div class="item"></div>
         <div class="item"></div>
     </div>
+    <div class="start btn" onclick="startBling()">开始闪</div>
+    <div class="end btn" onclick="endBling()">结束闪</div>
+    <script src="./js/1.js"></script>
 </body>
 
 </html>
